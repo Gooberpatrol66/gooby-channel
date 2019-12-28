@@ -1,8 +1,9 @@
- 
-(use-modules (guix packages)
-             (guix download)
-             (guix build-system gnu)
-             (guix licenses))
+(define-module (my-hello)
+  #:use-module (guix licenses)
+  #:use-module (guix packages)
+  #:use-module (guix build-system gnu)
+  #:use-module (guix download))
+  
 (define-public deadbeef
  (package
    (name "deadbeef")
