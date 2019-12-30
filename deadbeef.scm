@@ -4,7 +4,7 @@
   #:use-module (guix build-system gnu)
   #:use-module (guix download)
   #:use-module (gnu packages gettext)
-  #:use-module (gnu packages autotools)
+  #:use-module (gnu packages autotools))
   
 (define-public deadbeef
  (package
