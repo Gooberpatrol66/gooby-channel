@@ -3,7 +3,7 @@
   #:use-module (guix packages)
   #:use-module (guix build-system gnu)
   #:use-module (guix download)
-  #:use-module (guix gettext))
+  #:use-module (gnu packages autogen))
   
 (define-public deadbeef
  (package
