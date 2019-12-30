@@ -2,7 +2,8 @@
   #:use-module (guix licenses)
   #:use-module (guix packages)
   #:use-module (guix build-system gnu)
-  #:use-module (guix download))
+  #:use-module (guix download)
+  #:use-module (guix gettext))
   
 (define-public deadbeef
  (package
