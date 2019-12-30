@@ -20,7 +20,7 @@
    (build-system gnu-build-system)
    (native-inputs
    `(("gettext" ,gettext-minimal)
-	("autotools" ,autotools)))
+	("automake" ,automake)))
    (synopsis "A music player for *nix-like systems and OS X")
    (description
     "GNU Hello prints the message \"Hello, world!\" and then exits.  It
