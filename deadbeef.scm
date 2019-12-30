@@ -6,7 +6,8 @@
   #:use-module (gnu packages gettext)
   #:use-module (gnu packages autotools)
   #:use-module (gnu packages glib)
-  #:use-module (gnu packages pkg-config))
+  #:use-module (gnu packages pkg-config)
+  #:use-module (gnu packages jansson))
   
 (define-public deadbeef
  (package
@@ -22,11 +23,13 @@
    (build-system gnu-build-system)
    (native-inputs
    `(("gettext" ,gettext-minimal)
-	("automake" ,automake)
-	("autoconf" ,autoconf)
-	("libtool" ,libtool)
-	("intltool" ,intltool)
-	("pkg-config" ,pkg-config)))
+	 ("automake" ,automake)
+	 ("autoconf" ,autoconf)
+	 ("libtool" ,libtool)
+	 ("intltool" ,intltool)
+	 ("pkg-config" ,pkg-config)))
+   (inputs
+   `(("jansson" ,jansson)))
    (synopsis "A music player for *nix-like systems and OS X")
    (description
     "GNU Hello prints the message \"Hello, world!\" and then exits.  It
