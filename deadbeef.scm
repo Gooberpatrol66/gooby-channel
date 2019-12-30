@@ -4,7 +4,8 @@
   #:use-module (guix build-system gnu)
   #:use-module (guix download)
   #:use-module (gnu packages gettext)
-  #:use-module (gnu packages autotools))
+  #:use-module (gnu packages autotools)
+  #:use-module (gnu packages glib))
   
 (define-public deadbeef
  (package
@@ -22,7 +23,8 @@
    `(("gettext" ,gettext-minimal)
 	("automake" ,automake)
 	("autoconf" ,autoconf)
-	("libtool" ,libtool)))
+	("libtool" ,libtool)
+	("intltool" ,intltool)))
    (synopsis "A music player for *nix-like systems and OS X")
    (description
     "GNU Hello prints the message \"Hello, world!\" and then exits.  It
