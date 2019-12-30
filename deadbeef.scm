@@ -7,7 +7,7 @@
   #:use-module (gnu packages autotools)
   #:use-module (gnu packages glib)
   #:use-module (gnu packages pkg-config)
-  #:use-module (gnu packages jansson))
+  #:use-module (gnu packages web))
   
 (define-public deadbeef
  (package
