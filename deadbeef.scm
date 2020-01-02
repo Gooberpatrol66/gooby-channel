@@ -125,3 +125,26 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/cboxdoerfer/ddb_bookmark_manager")
    (license gpl2)))
+   
+(define-public deadbeef-bs2b
+ (package
+   (name "deadbeef-bs2b")
+   (version "a1961cd2f0686a7bdf0915f1fc7d62b5aba369bd")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://github.com/Alexey-Yakovenko/bs2b/archive/" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "0qrlbbv1wwfj9a4jnbjwg6cvbvfflsbzdwf31acwhr08n03id7kw"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("libbs2b" ,libbs2b)))
+   (synopsis "DeaDBeeF bs2b dsp plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://github.com/Alexey-Yakovenko/bs2b")
+   (license expat))) 
