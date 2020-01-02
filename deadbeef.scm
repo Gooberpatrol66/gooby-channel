@@ -103,3 +103,25 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://www.assembla.com/spaces/deadbeef_vfs_archive_reader")
    (license lgpl2.1)))
+   
+(define-public deadbeef-bookmark-manager
+ (package
+   (name "deadbeef-bookmark-manager")
+   (version "44b067c30d6301c2eca6e91159b6267fa847d850")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://github.com/cboxdoerfer/ddb_bookmark_manager/archive/" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "1f3i0717z0xzbmn9cmisixy22rsasp5rykdh0y36p2wrjxmvd3fk"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)))
+   (synopsis "DeaDBeeF vfs archive reader plugin with gzip, 7z and rar support")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://github.com/cboxdoerfer/ddb_bookmark_manager")
+   (license gpl2)))
