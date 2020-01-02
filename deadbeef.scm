@@ -7,7 +7,20 @@
   #:use-module (gnu packages autotools)
   #:use-module (gnu packages glib)
   #:use-module (gnu packages pkg-config)
-  #:use-module (gnu packages web))
+  #:use-module (gnu packages web)
+  #:use-module (gnu packages pulseaudio)
+  #:use-module (gnu packages gtk)
+  #:use-module (gnu packages xiph)
+  #:use-module (gnu packages curl)
+  #:use-module (gnu packages image)
+  #:use-module (gnu packages mp3)
+  #:use-module (gnu packages audio)
+  #:use-module (gnu packages cdrom)
+  #:use-module (gnu packages video)
+  #:use-module (gnu packages xorg)
+  #:use-module (gnu packages glib)
+  #:use-module (gnu packages compression)
+  #:use-module (gnu packages assembly))
   
 (define-public deadbeef
  (package
@@ -31,7 +44,36 @@
 	 ("intltool" ,intltool)
 	 ("pkg-config" ,pkg-config)))
    (inputs
-   `(("jansson" ,jansson)))
+   `(("jansson" ,jansson)
+     ("libsamplerate" ,libsamplerate)
+;;needs >3.10
+     ("gtk+" ,gtk+)
+;;needs >2.16
+;;     ("gtk+" ,gtk+-2)
+     ("glib" ,glib)
+     ("alsa-lib" ,alsa-lib)
+     ("libvorbis" ,libvorbis)
+     ("libogg" ,libogg)
+;;needs >7.10
+     ("curl" ,curl)
+     ("imlib2" ,imlib2)
+;;     ("libjpeg" ,libjpeg)
+;;     ("libpng" ,libpng)
+     ("libmad" ,libmad)
+     ("mpg123" ,mpg123)
+     ("flac" ,flac)
+     ("wavpack" ,wavpack)
+     ("libsndfile" ,libsndfile)
+     ("libcdio" ,libcdio)
+     ("libdccb" ,libcddb)
+     ("ffmpeg" ,ffmpeg)
+     ("libx11" ,libx11)
+     ("dbus" ,dbus)
+     ("pulseaudio" ,pulseaudio)
+     ("faad2" ,faad2)
+     ("zlib" ,zlib)
+     ("libzip" ,libzip)
+     ("yasm" ,yasm)))
    (synopsis "A music player for *nix-like systems and OS X")
    (description
     "GNU Hello prints the message \"Hello, world!\" and then exits.  It
@@ -39,3 +81,4 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://deadbeef.sourceforge.io/")
    (license gpl2)))
+
