@@ -20,7 +20,8 @@
   #:use-module (gnu packages xorg)
   #:use-module (gnu packages glib)
   #:use-module (gnu packages compression)
-  #:use-module (gnu packages assembly))
+  #:use-module (gnu packages assembly)
+  #:use-module (gnu packages xml))
   
 (define-public deadbeef
  (package
@@ -148,3 +149,28 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/Alexey-Yakovenko/bs2b")
    (license expat))) 
+   
+(define-public deadbeef-decast
+ (package
+   (name "deadbeef-decast")
+   (version "9ffd6d6dfb14")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://bitbucket.org/thesame/decast/get/" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "18g1k5ikyjqpypyqxz86m9sjcm0car2fwhzz58vdm20yf4x491ad"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("gtk+" ,gtk+)
+;;     ("gtk+" ,gtk+-2)
+     ("libxml2" ,libxml2)))
+   (synopsis "DeaDBeeF podcast subscription plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://bitbucket.org/thesame/decast")
+   (license zlib))) 
