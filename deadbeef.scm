@@ -223,3 +223,26 @@ command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/barthez/deadbeef-gnome-mmkeys")
    (license gpl2))) 
    
+(define-public deadbeef-infobar
+ (package
+   (name "deadbeef-infobar")
+   (version "1.4")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://bitbucket.org/dsimbiriatin/deadbeef-infobar/downloads/deadbeef-infobar-" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "0c9wh3wh1hdww7v96i8cy797la06mylhfi0880k8vwh88079aapf"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("libxml2" ,libxml2)
+     ("gdk-pixbuf" ,gdk-pixbuf)))
+   (synopsis "DeaDBeeF infobar plugin that shows lyrics and artist's biography")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://bitbucket.org/dsimbiriatin/deadbeef-infobar")
+   (license gpl2))) 
