@@ -246,3 +246,26 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://bitbucket.org/dsimbiriatin/deadbeef-infobar")
    (license gpl2))) 
+   
+(define-public deadbeef-jack
+ (package
+   (name "deadbeef-jack")
+   (version "62d1e6ac0452b7baa92fcc75b59bcb960df06da8")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://github.com/Alexey-Yakovenko/jack/archive/" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "17010bwa3pxznznv9bp8pxzibrmbnbr2ppz6wz4i92p98186cyx1"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("jack2" ,jack2)))
+   (synopsis "DeaDBeeF jack output plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://github.com/Alexey-Yakovenko/jack")
+   (license expat))) 
