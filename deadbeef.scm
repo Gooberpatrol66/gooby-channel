@@ -174,3 +174,52 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://bitbucket.org/thesame/decast")
    (license zlib))) 
+   
+(define-public deadbeef-fb
+ (package
+   (name "deadbeef-fb")
+   (version "47bc3fe0fe151dfbb75f90f9e4d5e9a7affd280a")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://gitlab.com/zykure/deadbeef-fb/repository/archive.tar.gz?ref=" version
+                                 ))
+             (sha256
+              (base32
+               "17gb1bhp4jzqgqv0yda40px4rigq75valhixmsfw0mkldl2910yv"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("gtk+" ,gtk+)
+;;     ("gtk+" ,gtk+-2)
+     ("deadbeef-librarybrowser" ,deadbeef-librarybrowser)))
+   (synopsis "DeaDBeeF filebrowser plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://gitlab.com/zykure/deadbeef-fb")
+   (license gpl2))) 
+   
+(define-public deadbeef-gnome-mmkeys
+ (package
+   (name "deadbeef-gnome-mmkeys")
+   (version "8e95cd380ba457fe6b666e5e704aa823d5eca1fa")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://github.com/barthez/deadbeef-gnome-mmkeys/archive/" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "0bq4d1j4q3j2j257lm9i7r1n83jna2h24msxn4wcldyliw2q602c"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("dbus" ,dbus)))
+   (synopsis "DeaDBeeF gnome (via dbus) multimedia keys plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://github.com/barthez/deadbeef-gnome-mmkeys")
+   (license gpl2))) 
+   
