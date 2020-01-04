@@ -21,7 +21,8 @@
   #:use-module (gnu packages glib)
   #:use-module (gnu packages compression)
   #:use-module (gnu packages assembly)
-  #:use-module (gnu packages xml))
+  #:use-module (gnu packages xml)
+  #:use-module (gnu packages algebra))
   
 (define-public deadbeef
  (package
@@ -314,5 +315,30 @@ command-line arguments, multiple languages, and so on.")
     "GNU Hello prints the message \"Hello, world!\" and then exits.  It
 serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
-   (home-page "https://github.com/JesseFarebro/deadbeef-librarybrowser")
+   (home-page "https://github.com/Serranya/deadbeef-mpris2-plugin")
    (license gpl3))) 
+   
+(define-public deadbeef-musical-spectrum
+ (package
+   (name "deadbeef-musical-spectrum")
+   (version "215bbad824b1ecf291083026f6b2a2bdbee1101b")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://github.com/cboxdoerfer/ddb_musical_spectrum/archive/" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "1qbgfalzqj05k34r4qjw9mhn18cv34zkqcp3aspsjkn514xvka7b"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("gtk+" ,gtk+)
+;;     ("gtk+" ,gtk+-2)
+     ("fftw" ,fftw)))
+   (synopsis "DeaDBeeF musical spectrum plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://github.com/cboxdoerfer/ddb_musical_spectrum")
+   (license gpl2))) 
