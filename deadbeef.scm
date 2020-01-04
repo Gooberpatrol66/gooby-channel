@@ -371,14 +371,8 @@ command-line arguments, multiple languages, and so on.")
 (define-public deadbeef-plugins-meta
  (package
    (name "deadbeef-plugins-meta")
-;;   (version "1")
-;;   (source (origin
-;;             (method url-fetch)
-;;             (uri (string-append "https://bitbucket.org/Lithopsian/deadbeef-opus/downloads/opus-" version
-;;                                 ".tar.gz"))
-;;             (sha256
-;;              (base32
-;;               "13dbd8ch4l5mhfszp8njvpv3w13m30809gphjgxmrymy2yvwvk8p"))))
+   (version #f)
+   (source #f)
    (build-system gnu-build-system)
    (inputs
    `(("deadbeef" ,deadbeef)
@@ -406,9 +400,9 @@ command-line arguments, multiple languages, and so on.")
    (description
     "GNU Hello prints the message \"Hello, world!\" and then exits.  It
 serves as an example of standard GNU coding practices.  As such, it supports
-command-line arguments, multiple languages, and so on.")))
-;;   (home-page "http://deadbeef.sourceforge.net")
-;;   (license gpl2))) 
+command-line arguments, multiple languages, and so on.")
+   (home-page #f)
+   (license gpl2))) 
    
 (define-public deadbeef-quick-search
  (package
