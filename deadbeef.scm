@@ -294,3 +294,25 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/JesseFarebro/deadbeef-librarybrowser")
    (license gpl2))) 
+   
+(define-public deadbeef-mpris
+ (package
+   (name "deadbeef-mpris")
+   (version "1.9")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://github.com/Serranya/deadbeef-mpris2-plugin/releases/download/v" version "/deadbeef-mpris2-plugin-" version
+                                 ".tar.xz"))
+             (sha256
+              (base32
+               "1j9czga0fyns75lk0q64vcbb1v0987334060r99yzsb6bpr6kdm8"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)))
+   (synopsis "DeaDBeeF MPRIS plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://github.com/JesseFarebro/deadbeef-librarybrowser")
+   (license gpl3))) 
