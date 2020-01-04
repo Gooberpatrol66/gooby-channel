@@ -264,7 +264,7 @@ command-line arguments, multiple languages, and so on.")
    (build-system gnu-build-system)
    (inputs
    `(("deadbeef" ,deadbeef)
-     ("jack2" ,jack2)))
+     ("jack2" ,jack-2)))
    (synopsis "DeaDBeeF jack output plugin")
    (description
     "GNU Hello prints the message \"Hello, world!\" and then exits.  It
