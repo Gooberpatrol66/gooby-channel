@@ -342,3 +342,28 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/cboxdoerfer/ddb_musical_spectrum")
    (license gpl2))) 
+   
+(define-public deadbeef-opus
+ (package
+   (name "deadbeef-opus")
+   (version "0.6")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://bitbucket.org/Lithopsian/deadbeef-opus/downloads/opus-" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "13dbd8ch4l5mhfszp8njvpv3w13m30809gphjgxmrymy2yvwvk8p"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("opusfile" ,opusfile)
+     ("libogg" ,libogg)))
+   (synopsis "DeaDBeeF ogg opus decoder plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://bitbucket.org/Lithopsian/deadbeef-opus")
+   (license gpl2))) 
+   
