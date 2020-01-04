@@ -573,3 +573,27 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/scorpp/db-vk")
    (license gpl2))) 
+   
+(define-public deadbeef-vu-meter
+ (package
+   (name "deadbeef-vu-meter")
+   (version "940d8d72a46993619c3fba4cde5e30c95f5a4b82")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://github.com/cboxdoerfer/ddb_vu_meter/archive/" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "0659ysi14s5b81bqhkas3sjdbmnnfk7w7xzrxsyanvffmxvvfz3v"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("gtk+" ,gtk+)))
+;;     ("gtk+" ,gtk+-2)))
+   (synopsis "DeaDBeeF vu meter plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://github.com/cboxdoerfer/ddb_vu_meter")
+   (license gpl2))) 
