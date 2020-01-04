@@ -372,7 +372,7 @@ command-line arguments, multiple languages, and so on.")
 (define-public deadbeef-plugins-meta
  (package
    (name "deadbeef-plugins-meta")
-   (version #f)
+   (version "0")
    (source #f)
    (build-system gnu-build-system)
    (inputs
