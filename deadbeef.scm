@@ -409,3 +409,26 @@ command-line arguments, multiple languages, and so on.")
 ;;   (home-page "http://deadbeef.sourceforge.net")
 ;;   (license gpl2))) 
    
+(define-public deadbeef-quick-search
+ (package
+   (name "deadbeef-quick-search")
+   (version "f1fc79733c8e488259ccf168bcf5b1445b71975c")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://github.com/cboxdoerfer/ddb_quick_search/archive/" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "19mkcvqyidlfvm554l6iw3zp9nfism46nr1rsvk1a35rpfajpad1"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("gtk+" ,gtk+)))
+;;     ("gtk+" ,gtk+-2)))
+   (synopsis "DeaDBeeF quick search plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://github.com/cboxdoerfer/ddb_quick_search")
+   (license gpl2))) 
