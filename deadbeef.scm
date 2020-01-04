@@ -479,3 +479,26 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/silentlexx/deadbeef_soxr")
    (license gpl2))) 
+   
+(define-public deadbeef-spectrogram
+ (package
+   (name "deadbeef-spectrogram")
+   (version "8d1b3713f3a3a8a93b4934a4782fb3db7f744fb7")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://github.com/cboxdoerfer/ddb_spectrogram/archive/" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "1whi1zj64jby7bkdrsj4rrwg0mkgx1z3kqk97w5s2rj6k5nkbdkx"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("fftw" ,fftw)))
+   (synopsis "DeaDBeeF spectrogram plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://github.com/cboxdoerfer/ddb_spectrogram")
+   (license gpl2))) 
