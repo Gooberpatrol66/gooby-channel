@@ -502,3 +502,26 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/cboxdoerfer/ddb_spectrogram")
    (license gpl2))) 
+   
+(define-public deadbeef-statusnotifier
+ (package
+   (name "deadbeef-statusnotifier")
+   (version "1.2")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://github.com/vovochka404/deadbeef-statusnotifier-plugin/archive/v" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "0vjimsqwshi1qb9pjzbgpr1ll9ydg2k19glkmrw25ry0smxw01l3"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("libdbusmenu" ,libdbusmenu)))
+   (synopsis "DeaDBeeF plasma5 tray icon plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://github.com/vovochka404/deadbeef-statusnotifier-plugin")
+   (license gpl2))) 
