@@ -525,3 +525,25 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/vovochka404/deadbeef-statusnotifier-plugin")
    (license gpl2))) 
+   
+(define-public deadbeef-stereo-widener
+ (package
+   (name "deadbeef-stereo-widener")
+   (version "d3990d772b02cdc6206f067748f5d1f9650616fb")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://github.com/Alexey-Yakovenko/stereo-widener/archive/" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "105pcm7pymcb11g2q434rrqzvfp3a5k8m3l02rg3ialjsjjvha3y"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)))
+   (synopsis "DeaDBeeF simple stereo widener plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://github.com/Alexey-Yakovenko/stereo-widener")
+   (license expat))) 
