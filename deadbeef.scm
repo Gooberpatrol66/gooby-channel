@@ -432,3 +432,27 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/cboxdoerfer/ddb_quick_search")
    (license gpl2))) 
+   
+(define-public deadbeef-replaygain-control
+ (package
+   (name "deadbeef-replaygain-control")
+   (version "c0788d47e5bcc2428c57fe4321566891c4abe452")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://github.com/cboxdoerfer/ddb_replaygain_control/archive/" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "1kyvnb5w38qq88c0hxkrg6mkasbcpns20n65z5ywbilp8w5gjp75"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("gtk+" ,gtk+)))
+;;     ("gtk+" ,gtk+-2)))
+   (synopsis "DeaDBeeF replay gain control plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://github.com/cboxdoerfer/ddb_replaygain_control")
+   (license gpl2))) 
