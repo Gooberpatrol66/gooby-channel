@@ -367,3 +367,45 @@ command-line arguments, multiple languages, and so on.")
    (home-page "https://bitbucket.org/Lithopsian/deadbeef-opus")
    (license gpl2))) 
    
+(define-public deadbeef-plugins-meta
+ (package
+   (name "deadbeef-plugins-meta")
+;;   (version "1")
+;;   (source (origin
+;;             (method url-fetch)
+;;             (uri (string-append "https://bitbucket.org/Lithopsian/deadbeef-opus/downloads/opus-" version
+;;                                 ".tar.gz"))
+;;             (sha256
+;;              (base32
+;;               "13dbd8ch4l5mhfszp8njvpv3w13m30809gphjgxmrymy2yvwvk8p"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("deadbeef-archive-reader" ,deadbeef-archive-reader)
+     ("deadbeef-bs2b" ,deadbeef-bs2b)
+     ("deadbeef-decast" ,deadbeef-decast)
+     ("deadbeef-fb" ,deadbeef-fb)
+     ("deadbeef-gnome-mmkeys" ,deadbeef-gnome-mmkeys)
+     ("deadbeef-infobar" ,deadbeef-infobar)
+     ("deadbeef-jack" ,deadbeef-jack)
+     ("deadbeef-librarybrowser" ,deadbeef-librarybrowser)
+     ("deadbeef-mpris" ,deadbeef-mpris)
+     ("deadbeef-musical-spectrum" ,deadbeef-musical-spectrum)
+     ("deadbeef-opus" ,deadbeef-opus)
+     ("deadbeef-quick-search" ,deadbeef-quick-search)
+     ("deadbeef-replaygain-control" ,deadbeef-replaygain-control)
+     ("deadbeef-soxr" ,deadbeef-soxr)
+     ("deadbeef-spectrogram" ,deadbeef-spectrogram)
+     ("deadbeef-statusnotifier" ,deadbeef-statusnotifier)
+     ("deadbeef-stereo-widener" ,deadbeef-stereo-widener)
+     ("deadbeef-vk" ,deadbeef-vk)
+     ("deadbeef-vu-meter" ,deadbeef-vu-meter)
+     ("deadbeef-waveform-seekbar" ,deadbeef-waveform-seekbar)))
+   (synopsis "Meta package for DeaDBeeF player third party plugins")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+;;   (home-page "http://deadbeef.sourceforge.net")
+;;   (license gpl2))) 
+   
