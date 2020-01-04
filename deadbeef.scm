@@ -22,7 +22,8 @@
   #:use-module (gnu packages compression)
   #:use-module (gnu packages assembly)
   #:use-module (gnu packages xml)
-  #:use-module (gnu packages algebra))
+  #:use-module (gnu packages algebra)
+  #:use-module (gnu packages gnome))
   
 (define-public deadbeef
  (package
@@ -547,3 +548,28 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/Alexey-Yakovenko/stereo-widener")
    (license expat))) 
+   
+(define-public deadbeef-vk
+ (package
+   (name "deadbeef-vk")
+   (version "0.2.2")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://github.com/scorpp/db-vk/archive/v" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "1yi7dh3spm03aq2zr23a4zdvfns9zpvx83s3qwpay957k2618q7q"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("gtk+" ,gtk+)
+;;     ("gtk+" ,gtk+-2)))
+     ("json-glib" ,json-glib)))
+   (synopsis "DeaDBeeF plugin for listening music from vkontakte.com")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://github.com/scorpp/db-vk")
+   (license gpl2))) 
