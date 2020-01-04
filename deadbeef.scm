@@ -456,3 +456,26 @@ serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/cboxdoerfer/ddb_replaygain_control")
    (license gpl2))) 
+   
+(define-public deadbeef-soxr
+ (package
+   (name "deadbeef-soxr")
+   (version "103341b7388d38110181494bb9763daa9dafa63e")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://github.com/silentlexx/deadbeef_soxr/archive/" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "0zwgd2rqkscbmjm4i1b899j7zh7p7byvwdrxpmy6rd75zdcvlcpr"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("soxr" ,soxr)))
+   (synopsis "DeaDBeeF sox resampler plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://github.com/silentlexx/deadbeef_soxr")
+   (license gpl2))) 
