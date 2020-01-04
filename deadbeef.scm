@@ -406,7 +406,7 @@ command-line arguments, multiple languages, and so on.")
    (description
     "GNU Hello prints the message \"Hello, world!\" and then exits.  It
 serves as an example of standard GNU coding practices.  As such, it supports
-command-line arguments, multiple languages, and so on.")
+command-line arguments, multiple languages, and so on.")))
 ;;   (home-page "http://deadbeef.sourceforge.net")
 ;;   (license gpl2))) 
    
