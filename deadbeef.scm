@@ -23,7 +23,8 @@
   #:use-module (gnu packages assembly)
   #:use-module (gnu packages xml)
   #:use-module (gnu packages algebra)
-  #:use-module (gnu packages gnome))
+  #:use-module (gnu packages gnome)
+  #:use-module (gnu packages linux))
   
 (define-public deadbeef
  (package
