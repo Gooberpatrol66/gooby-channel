@@ -24,7 +24,8 @@
   #:use-module (gnu packages xml)
   #:use-module (gnu packages algebra)
   #:use-module (gnu packages gnome)
-  #:use-module (gnu packages linux))
+  #:use-module (gnu packages linux)
+  #:use-module (gnu packages sqlite))
   
 (define-public deadbeef
  (package
@@ -591,4 +592,29 @@ command-line arguments, multiple languages, and so on.")
 serves as an example of standard GNU coding practices.  As such, it supports
 command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/cboxdoerfer/ddb_vu_meter")
+   (license gpl2))) 
+   
+(define-public deadbeef-waveform-seekbar
+ (package
+   (name "deadbeef-waveform-seekbar")
+   (version "0.5")
+   (source (origin
+             (method url-fetch)
+             (uri (string-append "https://github.com/cboxdoerfer/ddb_waveform_seekbar/archive/v" version
+                                 ".tar.gz"))
+             (sha256
+              (base32
+               "1pc50b793f1kc6558igffi16npf3iswm7wcbzr8q9r1bglk4dkbf"))))
+   (build-system gnu-build-system)
+   (inputs
+   `(("deadbeef" ,deadbeef)
+     ("gtk+" ,gtk+)
+     ("sqlite" ,sqlite)))
+;;     ("gtk+" ,gtk+-2)))
+   (synopsis "DeaDBeeF waveform seekbar plugin")
+   (description
+    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+serves as an example of standard GNU coding practices.  As such, it supports
+command-line arguments, multiple languages, and so on.")
+   (home-page "https://github.com/cboxdoerfer/ddb_waveform_seekbar")
    (license gpl2))) 
