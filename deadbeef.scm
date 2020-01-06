@@ -179,30 +179,30 @@ command-line arguments, multiple languages, and so on.")
    (home-page "https://bitbucket.org/thesame/decast")
    (license zlib))) 
    
-(define-public deadbeef-fb
- (package
-   (name "deadbeef-fb")
-   (version "47bc3fe0fe151dfbb75f90f9e4d5e9a7affd280a")
-   (source (origin
-             (method url-fetch)
-             (uri (string-append "https://gitlab.com/zykure/deadbeef-fb/repository/archive.tar.gz?ref=" version
-                                 ))
-             (sha256
-              (base32
-               "17gb1bhp4jzqgqv0yda40px4rigq75valhixmsfw0mkldl2910yv"))))
-   (build-system gnu-build-system)
-   (inputs
-   `(("deadbeef" ,deadbeef)
-     ("gtk+" ,gtk+)
-;;     ("gtk+" ,gtk+-2)
-     ("deadbeef-librarybrowser" ,deadbeef-librarybrowser)))
-   (synopsis "DeaDBeeF filebrowser plugin")
-   (description
-    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
-serves as an example of standard GNU coding practices.  As such, it supports
-command-line arguments, multiple languages, and so on.")
-   (home-page "https://gitlab.com/zykure/deadbeef-fb")
-   (license gpl2))) 
+;;(define-public deadbeef-fb
+;; (package
+;;   (name "deadbeef-fb")
+;;   (version "47bc3fe0fe151dfbb75f90f9e4d5e9a7affd280a")
+;;   (source (origin
+;;             (method url-fetch)
+;;             (uri (string-append "https://gitlab.com/zykure/deadbeef-fb/repository/archive.tar.gz?ref=" version
+;;                                 ))
+;;             (sha256
+;;              (base32
+;;               "17gb1bhp4jzqgqv0yda40px4rigq75valhixmsfw0mkldl2910yv"))))
+;;   (build-system gnu-build-system)
+;;   (inputs
+;;   `(("deadbeef" ,deadbeef)
+;;     ("gtk+" ,gtk+)
+;;;;     ("gtk+" ,gtk+-2)
+;;     ("deadbeef-librarybrowser" ,deadbeef-librarybrowser)))
+;;   (synopsis "DeaDBeeF filebrowser plugin")
+;;   (description
+;;    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+;;serves as an example of standard GNU coding practices.  As such, it supports
+;;command-line arguments, multiple languages, and so on.")
+;;   (home-page "https://gitlab.com/zykure/deadbeef-fb")
+;;   (license gpl2))) 
    
 (define-public deadbeef-gnome-mmkeys
  (package
@@ -274,30 +274,30 @@ command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/Alexey-Yakovenko/jack")
    (license expat))) 
 
-(define-public deadbeef-librarybrowser
- (package
-   (name "deadbeef-librarybrowser")
-   (version "68e1a92339be65cbeda09304e74f1744ff1c127d")
-   (source (origin
-             (method url-fetch)
-             (uri (string-append "https://github.com/JesseFarebro/deadbeef-librarybrowser/archive/" version
-                                 ".tar.gz"))
-             (sha256
-              (base32
-               "1q9cygay6ss7ci1mw5j2sy74984bvljahysgqikk52g8g82103lf"))))
-   (build-system gnu-build-system)
-   (inputs
-   `(("deadbeef" ,deadbeef)
-     ("gtk+" ,gtk+)
-;;     ("gtk+" ,gtk+-2)
-     ("deadbeef-fb" ,deadbeef-fb)))
-   (synopsis "DeaDBeeF filebrowser plugin that resembles foobar2k music library")
-   (description
-    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
-serves as an example of standard GNU coding practices.  As such, it supports
-command-line arguments, multiple languages, and so on.")
-   (home-page "https://github.com/JesseFarebro/deadbeef-librarybrowser")
-   (license gpl2))) 
+;;(define-public deadbeef-librarybrowser
+;; (package
+;;   (name "deadbeef-librarybrowser")
+;;   (version "68e1a92339be65cbeda09304e74f1744ff1c127d")
+;;   (source (origin
+;;             (method url-fetch)
+;;             (uri (string-append "https://github.com/JesseFarebro/deadbeef-librarybrowser/archive/" version
+;;                                 ".tar.gz"))
+;;             (sha256
+;;              (base32
+;;               "1q9cygay6ss7ci1mw5j2sy74984bvljahysgqikk52g8g82103lf"))))
+;;   (build-system gnu-build-system)
+;;   (inputs
+;;   `(("deadbeef" ,deadbeef)
+;;     ("gtk+" ,gtk+)
+;;;;     ("gtk+" ,gtk+-2)
+;;     ("deadbeef-fb" ,deadbeef-fb)))
+;;   (synopsis "DeaDBeeF filebrowser plugin that resembles foobar2k music library")
+;;   (description
+;;    "GNU Hello prints the message \"Hello, world!\" and then exits.  It
+;;serves as an example of standard GNU coding practices.  As such, it supports
+;;command-line arguments, multiple languages, and so on.")
+;;   (home-page "https://github.com/JesseFarebro/deadbeef-librarybrowser")
+;;   (license gpl2))) 
    
 (define-public deadbeef-mpris
  (package
@@ -381,11 +381,11 @@ command-line arguments, multiple languages, and so on.")
      ("deadbeef-archive-reader" ,deadbeef-archive-reader)
      ("deadbeef-bs2b" ,deadbeef-bs2b)
      ("deadbeef-decast" ,deadbeef-decast)
-     ("deadbeef-fb" ,deadbeef-fb)
+;;     ("deadbeef-fb" ,deadbeef-fb)
      ("deadbeef-gnome-mmkeys" ,deadbeef-gnome-mmkeys)
      ("deadbeef-infobar" ,deadbeef-infobar)
      ("deadbeef-jack" ,deadbeef-jack)
-     ("deadbeef-librarybrowser" ,deadbeef-librarybrowser)
+;;     ("deadbeef-librarybrowser" ,deadbeef-librarybrowser)
      ("deadbeef-mpris" ,deadbeef-mpris)
      ("deadbeef-musical-spectrum" ,deadbeef-musical-spectrum)
      ("deadbeef-opus" ,deadbeef-opus)
