@@ -59,6 +59,7 @@
      ("alsa-lib" ,alsa-lib)
      ("libvorbis" ,libvorbis)
      ("libogg" ,libogg)
+     ("opusfile" ,opusfile)
 ;;needs >7.10
      ("curl" ,curl)
      ("imlib2" ,imlib2)
@@ -179,6 +180,7 @@ command-line arguments, multiple languages, and so on.")
    (home-page "https://bitbucket.org/thesame/decast")
    (license zlib))) 
    
+;; disabled; circular dependency on librarybrowser
 ;;(define-public deadbeef-fb
 ;; (package
 ;;   (name "deadbeef-fb")
@@ -274,6 +276,7 @@ command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/Alexey-Yakovenko/jack")
    (license expat))) 
 
+;; disabled; circular dependency on fb
 ;;(define-public deadbeef-librarybrowser
 ;; (package
 ;;   (name "deadbeef-librarybrowser")
@@ -346,6 +349,7 @@ command-line arguments, multiple languages, and so on.")
    (home-page "https://github.com/cboxdoerfer/ddb_musical_spectrum")
    (license gpl2))) 
    
+;;redundant, with builtin opus support?
 (define-public deadbeef-opus
  (package
    (name "deadbeef-opus")
