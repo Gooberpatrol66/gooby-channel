@@ -40,13 +40,7 @@
                "1wsx62gi1bfd9rx5br2gprq4q3sfp7iqj1inxhhiqjasbm85vg50"))))
    (build-system gnu-build-system)
    (arguments
-<<<<<<< HEAD
-    `(#:make-flags '("CFLAGS=$CFLAGS -Wno-error"
-                     "CXXFLAGS=$CXXFLAGS -Wno-error")
-      #:tests? #f))
-=======
-    `(#:tests? #f))
->>>>>>> parent of 49a3ecb... deadbeef: ad wno-error flag
+   `(#:tests? #f))
    (native-inputs
    `(("gettext" ,gettext-minimal)
 	 ("automake" ,automake)
