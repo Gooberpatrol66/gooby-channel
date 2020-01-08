@@ -54,7 +54,7 @@
 ;;needs >3.10
      ("gtk+" ,gtk+)
 ;;needs >2.16
-;;     ("gtk+" ,gtk+-2)
+     ("gtk+2" ,gtk+-2)
      ("glib" ,glib)
      ("alsa-lib" ,alsa-lib)
      ("libvorbis" ,libvorbis)
