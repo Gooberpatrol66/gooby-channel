@@ -52,7 +52,7 @@
    `(("jansson" ,jansson)
      ("libsamplerate" ,libsamplerate)
 ;;needs >3.10
-     ("gtk+" ,gtk+)
+;;     ("gtk+" ,gtk+)
 ;;needs >2.16
      ("gtk+2" ,gtk+-2)
      ("glib" ,glib)
