@@ -3,6 +3,7 @@
   #:use-module (guix packages)
   #:use-module (guix build-system gnu)
   #:use-module (guix download)
+  #:use-module (guix svn-download)
   #:use-module (gnu packages gettext)
   #:use-module (gnu packages autotools)
   #:use-module (gnu packages glib)
@@ -92,11 +93,11 @@ command-line arguments, multiple languages, and so on.")
 (define-public deadbeef-archive-reader
  (package
    (name "deadbeef-archive-reader")
-   (version "1.8.2")
+   (version "19")
    (source (origin
-             (method url-fetch)
-             (uri (string-append "https://github.com/DeaDBeeF-Player/deadbeef/archive/" version
-                                 ".tar.gz"))
+             (method svn-fetch)
+             (uri (url "https://subversion.assembla.com/svn/deadbeef_vfs_archive_reader/trunk/src")
+                  (revision (string->number version)))
              (sha256
               (base32
                "1wsx62gi1bfd9rx5br2gprq4q3sfp7iqj1inxhhiqjasbm85vg50"))))
