@@ -96,8 +96,9 @@ command-line arguments, multiple languages, and so on.")
    (version "19")
    (source (origin
              (method svn-fetch)
-             (uri (url "https://subversion.assembla.com/svn/deadbeef_vfs_archive_reader/trunk/src")
-                  (revision (string->number version)))
+             (uri (svn-reference
+                   (url "https://subversion.assembla.com/svn/deadbeef_vfs_archive_reader/trunk/src")
+                   (revision (string->number version))))
              (sha256
               (base32
                "1wsx62gi1bfd9rx5br2gprq4q3sfp7iqj1inxhhiqjasbm85vg50"))))
