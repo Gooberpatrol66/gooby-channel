@@ -101,7 +101,7 @@ command-line arguments, multiple languages, and so on.")
                    (revision (string->number version))))
              (sha256
               (base32
-               "1wsx62gi1bfd9rx5br2gprq4q3sfp7iqj1inxhhiqjasbm85vg50"))))
+               "1sl3xrrv4chv70yxw70bacch4afp52n28m8rdqfp3nc7fpd6ryrh"))))
    (build-system gnu-build-system)
    (inputs
    `(("deadbeef" ,deadbeef)))
