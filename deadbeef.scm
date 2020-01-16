@@ -109,7 +109,8 @@ command-line arguments, multiple languages, and so on.")
      (modify-phases %standard-phases
       (delete 'configure))))
    (inputs
-   `(("deadbeef" ,deadbeef)))
+   `(("deadbeef" ,deadbeef)
+     ("zlib" ,zlib)))
    (synopsis "DeaDBeeF vfs archive reader plugin with gzip, 7z and rar support")
    (description
     "GNU Hello prints the message \"Hello, world!\" and then exits.  It
