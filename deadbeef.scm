@@ -99,10 +99,15 @@ command-line arguments, multiple languages, and so on.")
              (uri (svn-reference
                    (url "https://subversion.assembla.com/svn/deadbeef_vfs_archive_reader/trunk/src")
                    (revision (string->number version))))
+;;	     (patches (search-patches "blah"))
              (sha256
               (base32
                "1sl3xrrv4chv70yxw70bacch4afp52n28m8rdqfp3nc7fpd6ryrh"))))
    (build-system gnu-build-system)
+   (arguments
+   `(#:phases
+     modify-phases %standard-phases
+      (delete 'configure)))
    (inputs
    `(("deadbeef" ,deadbeef)))
    (synopsis "DeaDBeeF vfs archive reader plugin with gzip, 7z and rar support")
