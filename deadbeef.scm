@@ -100,10 +100,10 @@ command-line arguments, multiple languages, and so on.")
              (uri (svn-reference
                    (url "https://subversion.assembla.com/svn/deadbeef_vfs_archive_reader/trunk/src")
                    (revision (string->number version))))
-	     (patches (search-patches "fix-blargg_ok-declaration.patch"))
              (sha256
               (base32
-               "1sl3xrrv4chv70yxw70bacch4afp52n28m8rdqfp3nc7fpd6ryrh"))))
+               "1sl3xrrv4chv70yxw70bacch4afp52n28m8rdqfp3nc7fpd6ryrh"))
+             (patches (search-patches "fix-blargg_ok-declaration.patch"))))
    (build-system gnu-build-system)
    (arguments
    `(#:phases
