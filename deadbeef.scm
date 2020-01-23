@@ -110,7 +110,8 @@ command-line arguments, multiple languages, and so on.")
      (modify-phases %standard-phases
 ;;      (add-before 'build 'break (lambda () (#f)))
       (delete 'configure))
-     #:make-flags (list "CC=gcc")))
+     #:make-flags (list "CC=gcc")
+     #:tests? #f))
    (inputs
    `(("deadbeef" ,deadbeef)
      ("zlib" ,zlib)))
