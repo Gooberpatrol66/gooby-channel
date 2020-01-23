@@ -1,7 +1,6 @@
-diff --git a/fex/fex/blargg_common.h b/fex/fex/blargg_common.h
-index a11579f..4a72915 100644
---- a/fex/fex/blargg_common.h
-+++ b/fex/fex/blargg_common.h
+diff -ur fex/fex/blargg_common.h fex/fex/blargg_common.h
+--- fex/fex/blargg_common.h	2017-12-11 04:23:06.117064206 +0200
++++ fex/fex/blargg_common.h	2017-12-11 04:24:33.193846532 +0200
 @@ -12,7 +12,7 @@
  typedef const char* blargg_err_t; // 0 on success, otherwise error string
  
