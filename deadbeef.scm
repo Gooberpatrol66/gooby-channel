@@ -103,8 +103,7 @@ command-line arguments, multiple languages, and so on.")
              (sha256
               (base32
                "1sl3xrrv4chv70yxw70bacch4afp52n28m8rdqfp3nc7fpd6ryrh"))
-             (patches (search-patches "fix-blargg_ok-declaration.patch")
-                      (search-patches "fix-install-dir.patch"))))
+             (patches (search-patches "fix-blargg_ok-declaration.patch" "fix-install-dir.patch"))))
    (build-system gnu-build-system)
    (arguments
    `(#:phases
