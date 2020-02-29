@@ -172,7 +172,7 @@
        ("python" ,python)
        ("glib" ,glib)
        ("dbus-glib" ,dbus-glib)
-       ("gtk+" ,gtk+))
+       ("gtk+" ,gtk+)))
 ;;    (native-inputs
 ;;     `(("pkg-config" ,pkg-config)))
     (home-page "http://ladish.org/")
