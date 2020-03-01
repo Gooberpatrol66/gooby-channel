@@ -44,7 +44,7 @@
 ;;             (invoke "make" "features")))
 ;;         (delete 'configure))))
     (inputs
-     `(("jack2" ,jack2)
+     `(("jack2" ,jack-2)
        ("qtbase" ,qtbase)
        ("python-pyqt" ,python-pyqt)
        ("python-dbus" ,python-dbus)
@@ -89,7 +89,7 @@
 ;;         (delete 'configure))))
     (inputs
      `(("alsa-lib" ,alsa-lib)
-       ("jack2" ,jack2)
+       ("jack2" ,jack-2)
        ("dbus" ,dbus)))
 ;;    (native-inputs
 ;;     `(("pkg-config" ,pkg-config)))
@@ -165,7 +165,7 @@
 ;;         (delete 'configure))))
     (inputs
      `(("alsa-lib" ,alsa-lib)
-       ("jack2" ,jack2)
+       ("jack2" ,jack-2)
        ("dbus" ,dbus)
        ("e2fsprogs" ,e2fsprogs)
        ("expat" ,expat)
