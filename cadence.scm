@@ -1,4 +1,4 @@
-(define-module (gnu packages cadence)
+(define-module (cadence)
   #:use-module (guix licenses)
   #:use-module (guix packages)
   #:use-module (gnu packages)
