@@ -126,12 +126,13 @@
 ;;             (setenv "CC" "gcc")
 ;;             (invoke "make" "features")))
          (delete 'configure))))
-    (inputs
-     `(("which" ,which)))
+;;    (inputs
+;;     `(("which" ,which)))
 ;;       ("jack2" ,jack2)
 ;;       ("dbus" ,dbus)))
-;;    (native-inputs
-;;     `(("pkg-config" ,pkg-config)))
+    (native-inputs
+     `(("pkg-config" ,pkg-config)
+       ("which" ,which)))
     (home-page "https://github.com/kmatheussen/jack_capture")
     (synopsis "A program for recording soundfiles with jack")
     (description "Features: human-readable filenames, >4GB wav file splitting, sndfile format support, mp3 support, writing to stdout, console meter, connecting to jack ports, unlimited jack ports, automatic buffers, auto-reniced disk thread, better performance than Ardour, can write 256 channels of 32 bit wave at once to a local hard drive")
