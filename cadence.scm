@@ -158,13 +158,14 @@
 ;;     `(#:tests? #f                      ; no "check" target
 ;;       #:make-flags
 ;;       (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
-      '(#:phases
-        (modify-phases %standard-phases
-         (add-before 'build 'set-release-to-true
-           (lambda _
-	     (substitute* "wscript"
-             (("/usr/bin/env python") ("/usr/bin/env python2"))	  
-             (("RELEASE = False") ("RELEASE = True"))))))))
+;;      '(#:phases
+;;        (modify-phases %standard-phases
+;;         (add-before 'build 'set-release-to-true
+;;           (lambda _
+;;	     (substitute* "wscript"
+;;             (("/usr/bin/env python") ("/usr/bin/env python2"))	  
+;;             (("RELEASE = False") ("RELEASE = True"))))))))
+      '(#:python python2))
 ;;         (delete 'configure))))
     (inputs
      `(("alsa-lib" ,alsa-lib)
