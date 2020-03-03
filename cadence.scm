@@ -69,7 +69,7 @@
        (uri
         (git-reference
          (url "https://github.com/linuxaudio/a2jmidid.git")
-         (commit (string-append "v" version))))
+         (commit version)))
        (file-name (git-file-name name version))
        (sha256
         (base32
@@ -107,7 +107,7 @@
        (uri
         (git-reference
          (url "https://github.com/kmatheussen/jack_capture.git")
-         (commit (string-append "v" version))))
+         (commit version)))
        (file-name (git-file-name name version))
        (sha256
         (base32
@@ -145,7 +145,7 @@
        (uri
         (git-reference
          (url "https://github.com/LADI/ladish.git")
-         (commit (string-append "v" version))))
+         (commit version)))
        (file-name (git-file-name name version))
        (sha256
         (base32
