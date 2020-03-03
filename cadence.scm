@@ -14,6 +14,7 @@
   #:use-module (gnu packages xml)
   #:use-module (gnu packages python)
   #:use-module (gnu packages gtk)
+  #:use-module (gnu packages pkg-config)
   #:use-module (guix git-download))
 
 (define-public cadence
