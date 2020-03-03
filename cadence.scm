@@ -127,7 +127,7 @@
 ;;             (invoke "make" "features")))
          (delete 'configure))))
     (inputs
-     `(("which" ,which))
+     `(("which" ,which)))
 ;;       ("jack2" ,jack2)
 ;;       ("dbus" ,dbus)))
 ;;    (native-inputs
