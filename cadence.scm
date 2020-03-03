@@ -127,8 +127,8 @@
 ;;             (invoke "make" "features")))
          (delete 'configure))))
     (inputs
-     `(("libsndfile" ,libsndfile)))
-;;       ("jack2" ,jack2)
+     `(("libsndfile" ,libsndfile)
+       ("jack2" ,jack2)))
 ;;       ("dbus" ,dbus)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
