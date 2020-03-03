@@ -126,8 +126,8 @@
 ;;             (setenv "CC" "gcc")
 ;;             (invoke "make" "features")))
          (delete 'configure))))
-;;    (inputs
-;;     `(("which" ,which)))
+    (inputs
+     `(("libsndfile" ,libsndfile)))
 ;;       ("jack2" ,jack2)
 ;;       ("dbus" ,dbus)))
     (native-inputs
