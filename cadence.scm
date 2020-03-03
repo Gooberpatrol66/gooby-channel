@@ -49,7 +49,7 @@
        ("python-pyqt" ,python-pyqt)
        ("python-dbus" ,python-dbus)
        ("a2jmidid" ,a2jmidid)
-       ("jack_capture" ,jack_capture)
+       ("jack-capture" ,jack-capture)
        ("pulseaudio" ,pulseaudio)
        ("ladish" ,ladish)))
 ;;    (native-inputs
@@ -97,9 +97,9 @@
     (description "This project aims to ease the usage of legacy, non JACK enabled applications, in a JACK MIDI enabled system, when using jack2.")
     (license gpl2)))
 
-(define-public jack_capture
+(define-public jack-capture
   (package
-    (name "jack_capture")
+    (name "jack-capture")
     (version "0.97.3")
     (source
      (origin
