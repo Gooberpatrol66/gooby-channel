@@ -116,10 +116,10 @@
          "0jcqky96q8xgya6wqv1p8pj9fkf2wh7ynl67ah7x5bn3basgfclf"))))
     (build-system gnu-build-system)
     (arguments
-;;     `(#:tests? #f                      ; no "check" target
+     `(#:tests? #f                      ; no "check" target
 ;;       #:make-flags
 ;;       (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
-     `(#:phases
+       #:phases
        (modify-phases %standard-phases
 ;;         (add-before 'build 'set-CC-variable-and-show-features
 ;;           (lambda _
