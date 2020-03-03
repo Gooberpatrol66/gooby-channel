@@ -150,7 +150,7 @@
        (file-name (git-file-name name version))
        (sha256
         (base32
-         "0fqgncqlr86n38yy7pa118mswfacmfczj7w9xx6c6k0jav3wk29k"))))
+         "0cmmpz87cs2j15d5jbzffx24gqlgrcq0465k3qx12ai9mbi6lbf0"))))
     (build-system waf-build-system)
 ;;    (arguments
 ;;     `(#:tests? #f                      ; no "check" target
