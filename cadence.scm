@@ -112,7 +112,7 @@
        (file-name (git-file-name name version))
        (sha256
         (base32
-         "1x6rcl3f4nklnx4p5jln9a7fpj9y7agjxs9rw7cccmwnski7pnsq"))))
+         "0jcqky96q8xgya6wqv1p8pj9fkf2wh7ynl67ah7x5bn3basgfclf"))))
     (build-system gnu-build-system)
 ;;    (arguments
 ;;     `(#:tests? #f                      ; no "check" target
