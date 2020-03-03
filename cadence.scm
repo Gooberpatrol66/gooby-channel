@@ -114,17 +114,17 @@
         (base32
          "0jcqky96q8xgya6wqv1p8pj9fkf2wh7ynl67ah7x5bn3basgfclf"))))
     (build-system gnu-build-system)
-;;    (arguments
+    (arguments
 ;;     `(#:tests? #f                      ; no "check" target
 ;;       #:make-flags
 ;;       (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
-;;       #:phases
-;;       (modify-phases %standard-phases
+     `(#:phases
+       (modify-phases %standard-phases
 ;;         (add-before 'build 'set-CC-variable-and-show-features
 ;;           (lambda _
 ;;             (setenv "CC" "gcc")
 ;;             (invoke "make" "features")))
-;;         (delete 'configure))))
+         (delete 'configure))))
 ;;    (inputs
 ;;     `(("alsa-lib" ,alsa-lib)
 ;;       ("jack2" ,jack2)
