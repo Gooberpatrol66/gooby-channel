@@ -100,7 +100,7 @@
 (define-public jack_capture
   (package
     (name "jack_capture")
-    (version "0.97.3")
+    (version "0.9.73")
     (source
      (origin
        (method git-fetch)
