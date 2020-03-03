@@ -154,16 +154,16 @@
         (base32
          "0cmmpz87cs2j15d5jbzffx24gqlgrcq0465k3qx12ai9mbi6lbf0"))))
     (build-system waf-build-system)
-;;    (arguments
+    (arguments
 ;;     `(#:tests? #f                      ; no "check" target
 ;;       #:make-flags
 ;;       (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
-;;       #:phases
-;;       (modify-phases %standard-phases
-;;         (add-before 'build 'set-CC-variable-and-show-features
-;;           (lambda _
-;;             (setenv "CC" "gcc")
-;;             (invoke "make" "features")))
+      '(#:phases
+        (modify-phases %standard-phases
+         (add-before 'build 'set-release-to-true
+           (lambda _
+            (substitute* "wscript"
+             (("RELEASE = False") ("RELEASE = True"))))))))
 ;;         (delete 'configure))))
     (inputs
      `(("alsa-lib" ,alsa-lib)
