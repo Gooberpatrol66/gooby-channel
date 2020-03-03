@@ -48,12 +48,13 @@
        ("qtbase" ,qtbase)
        ("python-pyqt" ,python-pyqt)
        ("python-dbus" ,python-dbus)
-       ("a2jmidid" ,a2jmidid)
+       ("a2jmidid" ,a2jmidid
        ("jack_capture" ,jack_capture)
        ("pulseaudio" ,pulseaudio)
        ("ladish" ,ladish)))
 ;;    (native-inputs
 ;;     `(("pkg-config" ,pkg-config)))
+)
     (home-page "https://kx.studio/Applications:Cadence")
     (synopsis "Collection of tools useful for audio production")
     (description "Includes Cadence, Cadence-JackMeter, Cadence-JackSettings, Cadence-Logs, Cadence-Render, Cadence-XY Controller, Catarina, Catia, Claudia, Claudia-Launcher")
