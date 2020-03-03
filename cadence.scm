@@ -73,7 +73,7 @@
        (file-name (git-file-name name version))
        (sha256
         (base32
-         "0fqgncqlr86n38yy7pa118mswfacmfczj7w9xx6c6k0jav3wk29k"))))
+         "1x6rcl3f4nklnx4p5jln9a7fpj9y7agjxs9rw7cccmwnski7pnsq"))))
     (build-system meson-build-system)
 ;;    (arguments
 ;;     `(#:tests? #f                      ; no "check" target
@@ -111,7 +111,7 @@
        (file-name (git-file-name name version))
        (sha256
         (base32
-         "0fqgncqlr86n38yy7pa118mswfacmfczj7w9xx6c6k0jav3wk29k"))))
+         "0fqgncqlr8"))))
     (build-system gnu-build-system)
 ;;    (arguments
 ;;     `(#:tests? #f                      ; no "check" target
