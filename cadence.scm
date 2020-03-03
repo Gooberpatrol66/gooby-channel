@@ -125,7 +125,7 @@
 ;;           (lambda _
 ;;             (setenv "CC" "gcc")
 ;;             (invoke "make" "features")))
-         (delete 'configure))))
+	     (delete 'configure 'check))))
     (inputs
      `(("libsndfile" ,libsndfile)
        ("jack2" ,jack-2)))
