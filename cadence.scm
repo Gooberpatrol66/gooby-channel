@@ -49,7 +49,7 @@
        ("python-pyqt" ,python-pyqt)
        ("python-dbus" ,python-dbus)
        ("a2jmidid" ,a2jmidid)
-       ("jack-capture" ,jack-capture)
+       ("jack_capture" ,jack_capture)
        ("pulseaudio" ,pulseaudio)
        ("ladish" ,ladish)))
 ;;    (native-inputs
@@ -97,9 +97,9 @@
     (description "This project aims to ease the usage of legacy, non JACK enabled applications, in a JACK MIDI enabled system, when using jack2.")
     (license gpl2)))
 
-(define-public jack-capture
+(define-public jack_capture
   (package
-    (name "jack-capture")
+    (name "jack_capture")
     (version "0.97.3")
     (source
      (origin
@@ -130,7 +130,7 @@
 ;;       ("dbus" ,dbus)))
 ;;    (native-inputs
 ;;     `(("pkg-config" ,pkg-config)))
-ch    (home-page "https://github.com/kmatheussen/jack_capture")
+    (home-page "https://github.com/kmatheussen/jack_capture")
     (synopsis "A program for recording soundfiles with jack")
     (description "Features: human-readable filenames, >4GB wav file splitting, sndfile format support, mp3 support, writing to stdout, console meter, connecting to jack ports, unlimited jack ports, automatic buffers, auto-reniced disk thread, better performance than Ardour, can write 256 channels of 32 bit wave at once to a local hard drive")
     (license gpl2)))
