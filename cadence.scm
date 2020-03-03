@@ -15,6 +15,7 @@
   #:use-module (gnu packages python)
   #:use-module (gnu packages gtk)
   #:use-module (gnu packages pkg-config)
+  #:use-module (gnu packages base)
   #:use-module (guix git-download))
 
 (define-public cadence
@@ -125,8 +126,8 @@
 ;;             (setenv "CC" "gcc")
 ;;             (invoke "make" "features")))
          (delete 'configure))))
-;;    (inputs
-;;     `(("alsa-lib" ,alsa-lib)
+    (inputs
+     `(("which" ,which))
 ;;       ("jack2" ,jack2)
 ;;       ("dbus" ,dbus)))
 ;;    (native-inputs
