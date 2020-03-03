@@ -162,7 +162,8 @@
         (modify-phases %standard-phases
          (add-before 'build 'set-release-to-true
            (lambda _
-            (substitute* "wscript"
+	     (substitute* "wscript"
+             (("/usr/bin/env python") ("/usr/bin/env python2"))	  
              (("RELEASE = False") ("RELEASE = True"))))))))
 ;;         (delete 'configure))))
     (inputs
