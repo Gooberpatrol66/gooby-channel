@@ -165,7 +165,7 @@
 ;;	     (substitute* "wscript"
 ;;             (("/usr/bin/env python") ("/usr/bin/env python2"))	  
 ;;             (("RELEASE = False") ("RELEASE = True"))))))))
-      '(#:python python2))
+      '(#:python python-2))
 ;;         (delete 'configure))))
     (inputs
      `(("alsa-lib" ,alsa-lib)
@@ -173,7 +173,7 @@
        ("dbus" ,dbus)
        ("e2fsprogs" ,e2fsprogs)
        ("expat" ,expat)
-       ("python" ,python)
+       ("python-2" ,python-2)
        ("glib" ,glib)
        ("dbus-glib" ,dbus-glib)
        ("gtk+" ,gtk+)))
