@@ -176,7 +176,7 @@
        ("expat" ,expat)
 ;;       ("python-2" ,python-2.7)
        ("glib" ,glib)
-       ("gettext" ,gettext)
+       ("gettext" ,gnu-gettext)
        ("dbus-glib" ,dbus-glib)
        ("gtk+" ,gtk+)))
 ;;    (native-inputs
