@@ -173,7 +173,7 @@
        ("dbus" ,dbus)
        ("e2fsprogs" ,e2fsprogs)
        ("expat" ,expat)
-       ("python-2" ,python-2.7)
+;;       ("python-2" ,python-2.7)
        ("glib" ,glib)
        ("dbus-glib" ,dbus-glib)
        ("gtk+" ,gtk+)))
