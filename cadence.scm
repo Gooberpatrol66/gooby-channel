@@ -16,6 +16,7 @@
   #:use-module (gnu packages gtk)
   #:use-module (gnu packages pkg-config)
   #:use-module (gnu packages base)
+  #:use-module (gnu packages gettext)
   #:use-module (guix git-download))
 
 (define-public cadence
@@ -175,6 +176,7 @@
        ("expat" ,expat)
 ;;       ("python-2" ,python-2.7)
        ("glib" ,glib)
+       ("gettext" ,gettext)
        ("dbus-glib" ,dbus-glib)
        ("gtk+" ,gtk+)))
 ;;    (native-inputs
