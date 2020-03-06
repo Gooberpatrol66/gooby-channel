@@ -46,10 +46,10 @@
          (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
          #:phases
          (modify-phases %standard-phases
-;;         (add-before 'build 'set-CC-variable-and-show-features
-;;           (lambda _
-;;             (setenv "CC" "gcc")
-;;             (invoke "make" "features")))
+          (add-before 'build 'set-CC-variable-and-show-features
+           (lambda _
+             (setenv "CC" "gcc")
+             (invoke "make" "features")))
           (delete 'configure))))
     (inputs
      `(("jack2" ,jack-2)
