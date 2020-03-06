@@ -21,6 +21,7 @@
   #:use-module (gnu packages gettext)
   #:use-module (gnu packages graphviz)
   #:use-module (gnu packages gnome)
+  #:use-module (gnu packages boost)
   #:use-module (gnu packages perl))
 
 (define-public cadence
@@ -221,6 +222,7 @@
     (inputs
      `(("graphviz" ,graphviz)
        ("gtkmm" ,gtkmm-2)
+       ("boost" ,boost)
        ("libgnomecanvasmm" ,libgnomecanvasmm)))
     (native-inputs
      `(("pkg-config" ,pkg-config)))
