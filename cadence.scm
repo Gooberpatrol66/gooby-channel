@@ -202,7 +202,7 @@
                            version ".tar.bz2"))
        (sha256
         (base32
-         "1mqfcqp5y8r0bfyr7ppl74n0lig45p9mc4b8adlcpvj74rhfy8pj"))))
+         "15n508a58wzjp28nca1fqhzy5fw6ii3ffkcqm6b947pxb3c2hy84"))))
     (build-system gnu-build-system)
     (arguments
      `(#:tests? #f))                      ; no "check" target
