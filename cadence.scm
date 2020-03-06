@@ -203,9 +203,9 @@
        (sha256
         (base32
          "15n508a58wzjp28nca1fqhzy5fw6ii3ffkcqm6b947pxb3c2hy84"))))
-    (build-system gnu-build-system)
-    (arguments
-     `(#:tests? #f))                      ; no "check" target
+    (build-system waf-build-system)
+;;    (arguments
+;;     `(#:tests? #f))                      ; no "check" target
 ;;       #:make-flags
 ;;        (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
 ;;       #:phases
