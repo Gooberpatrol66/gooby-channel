@@ -20,6 +20,7 @@
   #:use-module (gnu packages base)
   #:use-module (gnu packages gettext)
   #:use-module (gnu packages graphviz)
+  #:use-module (gnu packages libgnomecanvasmm)
   #:use-module (gnu packages perl))
 
 (define-public cadence
@@ -219,8 +220,8 @@
       `(#:python ,python-2))
     (inputs
      `(("graphviz" ,graphviz)
-       ("gtkmm" ,gtkmm-2)))
-;;       ("dbus" ,dbus)))
+       ("gtkmm" ,gtkmm-2)
+       ("libgnomecanvasmm" ,libgnomecanvasmm)))
     (native-inputs
      `(("pkg-config" ,pkg-config)))
 ;;       ("which" ,which)))
