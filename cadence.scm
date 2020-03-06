@@ -40,7 +40,7 @@
         (base32
          "07z8grnnpkd0nf3y3r6qjlk1jlzrbhdrp9mnhrhhmws54p1bhl20"))))
     (build-system gnu-build-system)
-;;    (arguments
+    (arguments
 ;;     `(#:tests? #f                      ; no "check" target
 ;;       #:make-flags
 ;;       (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
@@ -50,7 +50,7 @@
 ;;           (lambda _
 ;;             (setenv "CC" "gcc")
 ;;             (invoke "make" "features")))
-;;         (delete 'configure))))
+         (delete 'configure))
     (inputs
      `(("jack2" ,jack-2)
        ("qtbase" ,qtbase)
