@@ -5,6 +5,8 @@
   #:use-module (guix build-system gnu)
   #:use-module (guix build-system meson)
   #:use-module (guix build-system waf)
+  #:use-module (guix git-download)
+  #:use-module (guix download)
   #:use-module (gnu packages audio)
   #:use-module (gnu packages qt)
   #:use-module (gnu packages python-xyz)
@@ -17,8 +19,7 @@
   #:use-module (gnu packages pkg-config)
   #:use-module (gnu packages base)
   #:use-module (gnu packages gettext)
-  #:use-module (gnu packages perl)
-  #:use-module (guix git-download))
+  #:use-module (gnu packages perl))
 
 (define-public cadence
   (package
