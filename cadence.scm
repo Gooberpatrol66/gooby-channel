@@ -204,17 +204,18 @@
         (base32
          "15n508a58wzjp28nca1fqhzy5fw6ii3ffkcqm6b947pxb3c2hy84"))))
     (build-system waf-build-system)
-;;    (arguments
-;;     `(#:tests? #f))                      ; no "check" target
+    (arguments
+;;     `(#:tests? #f                      ; no "check" target
 ;;       #:make-flags
-;;        (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
-;;       #:phases
+;;       (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
+;;      '(#:phases
 ;;        (modify-phases %standard-phases
-;;         (add-before 'build 'set-CC-variable-and-show-features
+;;         (add-before 'build 'set-release-to-true
 ;;           (lambda _
-;;             (setenv "CC" "gcc")
-;;             (invoke "make" "features")))
-;;         (delete 'configure))))
+;;	     (substitute* "wscript"
+;;             (("/usr/bin/env python") ("/usr/bin/env python2"))	  
+;;             (("RELEASE = False") ("RELEASE = True"))))))))
+      `(#:python ,python-2))
 ;;    (inputs
 ;;     `(("libsndfile" ,libsndfile)
 ;;       ("jack2" ,jack-2)))
@@ -222,7 +223,7 @@
 ;;    (native-inputs
 ;;     `(("pkg-config" ,pkg-config)
 ;;       ("which" ,which)))
-    (home-page "https://github.com/kmatheussen/jack_capture")
-    (synopsis "A program for recording soundfiles with jack")
-    (description "Features: human-readable filenames, >4GB wav file splitting, sndfile format support, mp3 support, writing to stdout, console meter, connecting to jack ports, unlimited jack ports, automatic buffers, auto-reniced disk thread, better performance than Ardour, can write 256 channels of 32 bit wave at once to a local hard drive")
+    (home-page "http://drobilla.net/software/flowcanvas")
+    (synopsis "An interactive Gtkmm/Gnomecanvasmm widget for "boxes and lines" style environments (e.g. modular synths or interactive finite state automata diagrams).")
+    (description "FlowCanvas is an interactive Gtkmm/Gnomecanvasmm widget for graph-based interfaces (patchers, modular synthesizers, finite state automata, interactive graphs, etc).")
     (license gpl2)))
