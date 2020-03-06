@@ -17,6 +17,7 @@
   #:use-module (gnu packages pkg-config)
   #:use-module (gnu packages base)
   #:use-module (gnu packages gettext)
+  #:use-module (gnu packages perl)
   #:use-module (guix git-download))
 
 (define-public cadence
@@ -178,6 +179,7 @@
        ("glib" ,glib)
        ("gettext" ,gnu-gettext)
        ("dbus-glib" ,dbus-glib)
+       ("perl" ,perl)
        ("gtk+" ,gtk+)))
 ;;    (native-inputs
 ;;     `(("pkg-config" ,pkg-config)))
