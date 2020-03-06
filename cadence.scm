@@ -178,6 +178,7 @@
        ("python2" ,python-2.7)
        ("glib" ,glib)
        ("dbus-glib" ,dbus-glib)
+       ("flowcanvas" ,flowcanvas)
        ("gtk+" ,gtk+-2)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
@@ -187,4 +188,40 @@
     (home-page "http://ladish.org/")
     (synopsis "LADI Session Handler")
     (description "LADI Session Handler or simply ladish is a session management system for JACK applications on GNU/Linux. Its aim is to allow you to have many different audio programs running at once, to save their setup, close them down and then easily reload the setup at some other time. ladish doesn't deal with any kind of audio or MIDI data itself; it just runs programs, deals with saving/loading (arbitrary) data and connects JACK ports together. It can also be used to move entire sessions between computers, or post sessions on the Internet for download.")
+    (license gpl2)))
+    
+(define-public flowcanvas
+  (package
+    (name "flowcanvas")
+    (version "0.4.9")
+    (source
+     (origin
+       (method url-fetch)
+       (uri (string-append "http://download.drobilla.net/flowcanvas-"
+                           version ".tar.gz"))
+       (sha256
+        (base32
+         "1mqfcqp5y8r0bfyr7ppl74n0lig45p9mc4b8adlcpvj74rhfy8pj"))))
+    (build-system gnu-build-system)
+;;    (arguments
+;;     `(#:tests? #f                      ; no "check" target
+;;       #:make-flags
+;;        (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
+;;       #:phases
+;;        (modify-phases %standard-phases
+;;         (add-before 'build 'set-CC-variable-and-show-features
+;;           (lambda _
+;;             (setenv "CC" "gcc")
+;;             (invoke "make" "features")))
+;;         (delete 'configure))))
+;;    (inputs
+;;     `(("libsndfile" ,libsndfile)
+;;       ("jack2" ,jack-2)))
+;;       ("dbus" ,dbus)))
+;;    (native-inputs
+;;     `(("pkg-config" ,pkg-config)
+;;       ("which" ,which)))
+    (home-page "https://github.com/kmatheussen/jack_capture")
+    (synopsis "A program for recording soundfiles with jack")
+    (description "Features: human-readable filenames, >4GB wav file splitting, sndfile format support, mp3 support, writing to stdout, console meter, connecting to jack ports, unlimited jack ports, automatic buffers, auto-reniced disk thread, better performance than Ardour, can write 256 channels of 32 bit wave at once to a local hard drive")
     (license gpl2)))
