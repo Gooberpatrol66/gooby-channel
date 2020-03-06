@@ -51,8 +51,8 @@
 ;;             (setenv "CC" "gcc")
 ;;             (invoke "make" "features")))
      (substitute* "Makefile"
-             (("/etc/xdg") (string-append $(assoc-ref %outputs "out") "/etc/xdg")))
-          (delete 'configure))))))
+             (("/etc/xdg") (string-append $(assoc-ref %outputs "out") "/etc/xdg")))))
+          (delete 'configure)))))
     (inputs
      `(("jack2" ,jack-2)
        ("qtbase" ,qtbase)
