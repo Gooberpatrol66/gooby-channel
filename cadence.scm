@@ -60,6 +60,7 @@
        ("a2jmidid" ,a2jmidid)
        ("jack_capture" ,jack_capture)
        ("pulseaudio" ,pulseaudio)
+       ("python" ,python)
        ("ladish" ,ladish)))
     (native-inputs
      `(("pkg-config" ,pkg-config)))
@@ -155,7 +156,7 @@
        ("dbus" ,dbus)
        ("e2fsprogs" ,e2fsprogs)
        ("expat" ,expat)
-       ("python2" ,python-2.7)))
+       ("python2" ,python-2)))
 ;;      GUI won't build due to a boost error
 ;;       ("glib" ,glib)
 ;;       ("dbus-glib" ,dbus-glib)
