@@ -194,7 +194,7 @@
 (define-public flowcanvas
   (package
     (name "flowcanvas")
-    (version "0.4.9")
+    (version "0.7.1")
     (source
      (origin
        (method url-fetch)
