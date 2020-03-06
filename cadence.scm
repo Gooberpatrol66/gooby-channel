@@ -60,8 +60,8 @@
        ("jack_capture" ,jack_capture)
        ("pulseaudio" ,pulseaudio)
        ("ladish" ,ladish)))
-;;    (native-inputs
-;;     `(("pkg-config" ,pkg-config)))
+    (native-inputs
+     `(("pkg-config" ,pkg-config)))
     (home-page "https://kx.studio/Applications:Cadence")
     (synopsis "Collection of tools useful for audio production")
     (description "Includes Cadence, Cadence-JackMeter, Cadence-JackSettings, Cadence-Logs, Cadence-Render, Cadence-XY Controller, Catarina, Catia, Claudia, Claudia-Launcher")
