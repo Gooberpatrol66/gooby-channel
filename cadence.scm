@@ -204,8 +204,8 @@
         (base32
          "1mqfcqp5y8r0bfyr7ppl74n0lig45p9mc4b8adlcpvj74rhfy8pj"))))
     (build-system gnu-build-system)
-;;    (arguments
-;;     `(#:tests? #f                      ; no "check" target
+    (arguments
+     `(#:tests? #f))                      ; no "check" target
 ;;       #:make-flags
 ;;        (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
 ;;       #:phases
