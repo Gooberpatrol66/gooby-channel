@@ -209,7 +209,7 @@
        (patches (search-patches "gv234.patch"))))
     (build-system waf-build-system)
     (arguments
-;;     `(#:tests? #f                      ; no "check" target
+     `(#:tests? #f                      ; no "check" target
 ;;       #:make-flags
 ;;       (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
 ;;      '(#:phases
@@ -219,7 +219,7 @@
 ;;	     (substitute* "wscript"
 ;;             (("/usr/bin/env python") ("/usr/bin/env python2"))	  
 ;;             (("RELEASE = False") ("RELEASE = True"))))))))
-      `(#:python ,python-2))
+       #:python ,python-2))
     (inputs
      `(("graphviz" ,graphviz)
        ("gtkmm" ,gtkmm-2)
