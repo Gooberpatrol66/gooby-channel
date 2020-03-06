@@ -178,7 +178,7 @@
        ("python2" ,python-2.7)
        ("glib" ,glib)
        ("dbus-glib" ,dbus-glib)
-       ("gtk+" ,gtk+)))
+       ("gtk+" ,gtk+-2)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
        ("gettext" ,gnu-gettext)
