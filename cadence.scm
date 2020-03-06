@@ -48,9 +48,7 @@
          (modify-phases %standard-phases
           (add-before 'build 'fix-xdg-path
            (lambda _
-;;             (setenv "CC" "gcc")
-;;             (invoke "make" "features")))
-     (substitute* "Makefile"
+            (substitute* "Makefile"
              (("/etc/") (string-append (assoc-ref %outputs "out") "/etc/")))))
           (delete 'configure))))
     (inputs
@@ -86,17 +84,6 @@
         (base32
          "1x6rcl3f4nklnx4p5jln9a7fpj9y7agjxs9rw7cccmwnski7pnsq"))))
     (build-system meson-build-system)
-;;    (arguments
-;;     `(#:tests? #f                      ; no "check" target
-;;       #:make-flags
-;;       (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
-;;       #:phases
-;;       (modify-phases %standard-phases
-;;         (add-before 'build 'set-CC-variable-and-show-features
-;;           (lambda _
-;;             (setenv "CC" "gcc")
-;;             (invoke "make" "features")))
-;;         (delete 'configure))))
     (inputs
      `(("alsa-lib" ,alsa-lib)
        ("jack2" ,jack-2)
@@ -130,15 +117,10 @@
         (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
        #:phases
         (modify-phases %standard-phases
-;;         (add-before 'build 'set-CC-variable-and-show-features
-;;           (lambda _
-;;             (setenv "CC" "gcc")
-;;             (invoke "make" "features")))
          (delete 'configure))))
     (inputs
      `(("libsndfile" ,libsndfile)
        ("jack2" ,jack-2)))
-;;       ("dbus" ,dbus)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
        ("which" ,which)))
@@ -166,29 +148,20 @@
     (build-system waf-build-system)
     (arguments
      `(#:tests? #f                      ; no "check" target
-;;       #:make-flags
-;;       (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
-;;      '(#:phases
-;;        (modify-phases %standard-phases
-;;         (add-before 'build 'set-release-to-true
-;;           (lambda _
-;;	     (substitute* "wscript"
-;;             (("/usr/bin/env python") ("/usr/bin/env python2"))	  
-;;             (("RELEASE = False") ("RELEASE = True"))))))))
        #:python ,python-2))
-;;         (delete 'configure))))
     (inputs
      `(("alsa-lib" ,alsa-lib)
        ("jack2" ,jack-2)
        ("dbus" ,dbus)
        ("e2fsprogs" ,e2fsprogs)
        ("expat" ,expat)
-       ("python2" ,python-2.7)
-       ("glib" ,glib)
-       ("dbus-glib" ,dbus-glib)
-       ("flowcanvas" ,flowcanvas)
-       ("boost" ,boost)
-       ("gtk+" ,gtk+-2)))
+       ("python2" ,python-2.7)))
+;;      GUI won't build due to a boost error
+;;       ("glib" ,glib)
+;;       ("dbus-glib" ,dbus-glib)
+;;       ("flowcanvas" ,flowcanvas)
+;;       ("boost" ,boost)
+;;       ("gtk+" ,gtk+-2)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
        ("gettext" ,gnu-gettext)
@@ -215,15 +188,6 @@
     (build-system waf-build-system)
     (arguments
      `(#:tests? #f                      ; no "check" target
-;;       #:make-flags
-;;       (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
-;;      '(#:phases
-;;        (modify-phases %standard-phases
-;;         (add-before 'build 'set-release-to-true
-;;           (lambda _
-;;	     (substitute* "wscript"
-;;             (("/usr/bin/env python") ("/usr/bin/env python2"))	  
-;;             (("RELEASE = False") ("RELEASE = True"))))))))
        #:python ,python-2))
     (inputs
      `(("graphviz" ,graphviz)
@@ -232,7 +196,6 @@
        ("libgnomecanvasmm" ,libgnomecanvasmm)))
     (native-inputs
      `(("pkg-config" ,pkg-config)))
-;;       ("which" ,which)))
     (home-page "http://drobilla.net/software/flowcanvas")
     (synopsis "An interactive Gtkmm/Gnomecanvasmm widget for \"boxes and lines\" style environments (e.g. modular synths or interactive finite state automata diagrams).")
     (description "FlowCanvas is an interactive Gtkmm/Gnomecanvasmm widget for graph-based interfaces (patchers, modular synthesizers, finite state automata, interactive graphs, etc).")
