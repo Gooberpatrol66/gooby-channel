@@ -183,6 +183,7 @@
        ("glib" ,glib)
        ("dbus-glib" ,dbus-glib)
        ("flowcanvas" ,flowcanvas)
+       ("boost" ,boost)
        ("gtk+" ,gtk+-2)))
     (native-inputs
      `(("pkg-config" ,pkg-config)
