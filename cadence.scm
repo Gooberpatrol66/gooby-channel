@@ -194,12 +194,12 @@
 (define-public flowcanvas
   (package
     (name "flowcanvas")
-    (version "0.6.4")
+    (version "0.7.1")
     (source
      (origin
        (method url-fetch)
        (uri (string-append "http://download.drobilla.net/flowcanvas-"
-                           version ".tar.gz"))
+                           version ".tar.bz2"))
        (sha256
         (base32
          "1mqfcqp5y8r0bfyr7ppl74n0lig45p9mc4b8adlcpvj74rhfy8pj"))))
