@@ -42,8 +42,8 @@
     (build-system gnu-build-system)
     (arguments
      `(#:tests? #f                      ; no "check" target
-;;       `(#:make-flags
-;;         (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
+       #:make-flags
+         (list (string-append "PREFIX=" (assoc-ref %outputs "out")))
        #:phases
          (modify-phases %standard-phases
 ;;          (add-before 'build 'set-CC-variable-and-show-features
