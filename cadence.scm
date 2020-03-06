@@ -20,7 +20,7 @@
   #:use-module (gnu packages base)
   #:use-module (gnu packages gettext)
   #:use-module (gnu packages graphviz)
-  #:use-module (gnu packages libgnomecanvasmm)
+  #:use-module (gnu packages gnome)
   #:use-module (gnu packages perl))
 
 (define-public cadence
