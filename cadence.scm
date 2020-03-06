@@ -50,6 +50,8 @@
 ;;           (lambda _
 ;;             (setenv "CC" "gcc")
 ;;             (invoke "make" "features")))
+     (substitute* "Makefile"
+             (("$(DESTDIR)/etc/xdg") ("$(DESTDIR)$(PREFIX)/etc/xdg")))
           (delete 'configure))))
     (inputs
      `(("jack2" ,jack-2)
