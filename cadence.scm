@@ -205,7 +205,8 @@
                            version ".tar.bz2"))
        (sha256
         (base32
-         "15n508a58wzjp28nca1fqhzy5fw6ii3ffkcqm6b947pxb3c2hy84"))))
+         "15n508a58wzjp28nca1fqhzy5fw6ii3ffkcqm6b947pxb3c2hy84"))
+       (patches (search-patches "gv234.patch"))))
     (build-system waf-build-system)
     (arguments
 ;;     `(#:tests? #f                      ; no "check" target
