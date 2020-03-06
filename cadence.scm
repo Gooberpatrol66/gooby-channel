@@ -180,6 +180,7 @@
        ("gettext" ,gnu-gettext)
        ("dbus-glib" ,dbus-glib)
        ("perl" ,perl)
+       ("intltool" ,intltool)
        ("gtk+" ,gtk+)))
 ;;    (native-inputs
 ;;     `(("pkg-config" ,pkg-config)))
