@@ -159,7 +159,7 @@
        (sha256
         (base32
          "0cmmpz87cs2j15d5jbzffx24gqlgrcq0465k3qx12ai9mbi6lbf0"))
-       (patches (search-patches "ladish-configure-gladish.patch"))))
+       (patches (search-patches "ladish-configure-gladish.patch" "ladish-1-configure-libdir.patch"))))
     (build-system waf-build-system)
     (arguments
 ;;     `(#:tests? #f                      ; no "check" target
