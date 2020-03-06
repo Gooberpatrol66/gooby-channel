@@ -220,8 +220,8 @@
 ;;     `(("libsndfile" ,libsndfile)
 ;;       ("jack2" ,jack-2)))
 ;;       ("dbus" ,dbus)))
-;;    (native-inputs
-;;     `(("pkg-config" ,pkg-config)
+    (native-inputs
+     `(("pkg-config" ,pkg-config)))
 ;;       ("which" ,which)))
     (home-page "http://drobilla.net/software/flowcanvas")
     (synopsis "An interactive Gtkmm/Gnomecanvasmm widget for \"boxes and lines\" style environments (e.g. modular synths or interactive finite state automata diagrams).")
