@@ -224,6 +224,6 @@
 ;;     `(("pkg-config" ,pkg-config)
 ;;       ("which" ,which)))
     (home-page "http://drobilla.net/software/flowcanvas")
-    (synopsis "An interactive Gtkmm/Gnomecanvasmm widget for "boxes and lines" style environments (e.g. modular synths or interactive finite state automata diagrams).")
+    (synopsis "An interactive Gtkmm/Gnomecanvasmm widget for \"boxes and lines\" style environments (e.g. modular synths or interactive finite state automata diagrams).")
     (description "FlowCanvas is an interactive Gtkmm/Gnomecanvasmm widget for graph-based interfaces (patchers, modular synthesizers, finite state automata, interactive graphs, etc).")
     (license gpl2)))
