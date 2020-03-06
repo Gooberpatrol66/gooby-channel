@@ -158,7 +158,8 @@
        (file-name (git-file-name name version))
        (sha256
         (base32
-         "0cmmpz87cs2j15d5jbzffx24gqlgrcq0465k3qx12ai9mbi6lbf0"))))
+         "0cmmpz87cs2j15d5jbzffx24gqlgrcq0465k3qx12ai9mbi6lbf0"))
+       (patches (search-patches "ladish-configure-gladish.patch"))))
     (build-system waf-build-system)
     (arguments
 ;;     `(#:tests? #f                      ; no "check" target
