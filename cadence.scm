@@ -51,7 +51,7 @@
 ;;             (setenv "CC" "gcc")
 ;;             (invoke "make" "features")))
      (substitute* "Makefile"
-             (("$(DESTDIR)/etc/xdg") ("$(DESTDIR)$(PREFIX)/etc/xdg")))
+             (("/etc/xdg") (string-append $(assoc-ref %outputs "out") "/etc/xdg")))
           (delete 'configure))))
     (inputs
      `(("jack2" ,jack-2)
