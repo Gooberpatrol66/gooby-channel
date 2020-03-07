@@ -142,14 +142,14 @@
 (define-public ladish
   (package
     (name "ladish")
-    (version "ladish-1")
+    (version "1")
     (source
      (origin
        (method git-fetch)
        (uri
         (git-reference
          (url "https://github.com/LADI/ladish.git")
-         (commit version)))
+         (commit (string-append "ladish-" version))))
        (file-name (git-file-name name version))
        (sha256
         (base32
