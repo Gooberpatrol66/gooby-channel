@@ -65,6 +65,7 @@
        ("pulseaudio" ,pulseaudio)
        ("python" ,python)
        ("ladish" ,ladish)
+       ("python-wrapper" ,python-wrapper)
        ;; For WRAP-SCRIPT above.
        ("guile" ,guile-2.2)))
     (native-inputs
