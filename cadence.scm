@@ -65,15 +65,14 @@
        ("pulseaudio" ,pulseaudio)
        ("python" ,python)
        ("ladish" ,ladish)
-       ("python-wrapper" ,python-wrapper)
-       ;; For WRAP-SCRIPT above.
-       ("guile" ,guile-2.2)))
-    (native-inputs
-     `(("python-pyqt" ,python-pyqt)
+       ("python-pyqt" ,python-pyqt)
        ("python-wrapper" ,python-wrapper)
        ("python-dbus" ,python-dbus)
        ("qtbase" ,qtbase)
-       ("pkg-config" ,pkg-config)))
+       ;; For WRAP-SCRIPT above.
+       ("guile" ,guile-2.2)))
+    (native-inputs
+     `(("pkg-config" ,pkg-config)))
     (home-page "https://kx.studio/Applications:Cadence")
     (synopsis "Collection of tools useful for audio production")
     (description "Includes Cadence, Cadence-JackMeter, Cadence-JackSettings, Cadence-Logs, Cadence-Render, Cadence-XY Controller, Catarina, Catia, Claudia, Claudia-Launcher")
