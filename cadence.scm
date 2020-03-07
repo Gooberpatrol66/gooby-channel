@@ -22,6 +22,7 @@
   #:use-module (gnu packages graphviz)
   #:use-module (gnu packages gnome)
   #:use-module (gnu packages boost)
+  #:use-module (gnu packages guile)
   #:use-module (gnu packages perl))
 
 (define-public cadence
