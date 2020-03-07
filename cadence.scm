@@ -50,6 +50,12 @@
            (lambda _
             (substitute* "Makefile"
              (("/etc/") (string-append (assoc-ref %outputs "out") "/etc/")))))
+          (add-after 'install 'wrap-executables
+           (lambda* (#:key outputs #:allow-other-keys)
+             (let ((out (assoc-ref outputs "out")))
+               (wrap-script (string-append out "/bin/cadence")
+                            `("PYTHONPATH" ":" prefix (,(getenv "PYTHONPATH"))))
+               #t)))
           (delete 'configure))))
     (inputs
      `(("jack2" ,jack-2)
