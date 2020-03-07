@@ -63,7 +63,9 @@
        ("jack_capture" ,jack_capture)
        ("pulseaudio" ,pulseaudio)
        ("python" ,python)
-       ("ladish" ,ladish)))
+       ("ladish" ,ladish)
+       ;; For WRAP-SCRIPT above.
+       ("guile" ,guile-2.2)))
     (native-inputs
      `(("python-pyqt" ,python-pyqt)
        ("python-wrapper" ,python-wrapper)
